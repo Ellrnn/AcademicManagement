@@ -1,0 +1,11 @@
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\bin\Debug\net8.0\AcademicManagement.Communication.deps.json
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\bin\Debug\net8.0\AcademicManagement.Communication.dll
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\bin\Debug\net8.0\AcademicManagement.Communication.pdb
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\AcademicManagement.Communication.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\AcademicManagement.Communication.AssemblyInfoInputs.cache
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\AcademicManagement.Communication.AssemblyInfo.cs
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\AcademicManagement.Communication.csproj.CoreCompileInputs.cache
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\AcademicManagement.Communication.dll
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\refint\AcademicManagement.Communication.dll
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\AcademicManagement.Communication.pdb
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\ref\AcademicManagement.Communication.dll
