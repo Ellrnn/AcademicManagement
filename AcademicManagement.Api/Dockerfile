@@ -13,7 +13,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["AcademicManagement.Api/AcademicManagement.Api.csproj", "AcademicManagement.Api/"]
-COPY ["AcademicManagment.Communication/AcademicManagment.Communication.csproj", "AcademicManagment.Communication/"]
+COPY ["AcademicManagment.Communication/AcademicManagement.Communication.csproj", "AcademicManagment.Communication/"]
 RUN dotnet restore "./AcademicManagement.Api/AcademicManagement.Api.csproj"
 COPY . .
 WORKDIR "/src/AcademicManagement.Api"

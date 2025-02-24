@@ -141,3 +141,4 @@ D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagement.Api\bin\Debu
 D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagement.Api\bin\Debug\net8.0\AcademicManagement.Exception.dll
 D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagement.Api\bin\Debug\net8.0\AcademicManagement.Exception.pdb
 D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagement.Api\bin\Debug\net8.0\AcademicManagement.Communication.pdb
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagement.Api\obj\Debug\net8.0\AcademicManagement.Api.sourcelink.json

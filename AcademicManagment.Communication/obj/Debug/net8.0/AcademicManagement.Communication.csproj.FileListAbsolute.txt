@@ -9,3 +9,4 @@ D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication
 D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\refint\AcademicManagement.Communication.dll
 D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\AcademicManagement.Communication.pdb
 D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\ref\AcademicManagement.Communication.dll
+D:\.NetProjects\test\Academic\AcademicManagement\AcademicManagment.Communication\obj\Debug\net8.0\AcademicManagement.Communication.sourcelink.json
