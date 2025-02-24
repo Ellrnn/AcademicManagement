@@ -1,0 +1,17 @@
+services:
+  academicmanagement.api:
+    container_name: academicmanagement.api
+    build:
+      context: .
+      dockerfile: AcademicManagement.Api/Dockerfile.prod
+    ports:
+      - "5001:5001"
+  academicmanagement.database:
+    image: postgres:latest
+    container_name: academicmanagement.database
+    environment:
+      - POSTGRES_DB=acad
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./.containers/academicmanagement-db:/var/lib/postgresql/data
