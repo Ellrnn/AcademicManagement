@@ -43,6 +43,8 @@ builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilters))
 
 var app = builder.Build();
 
+app.UseHealthChecks("/health");
+
 app.UseCors("AllowAll");
 
 if (app.Environment.IsDevelopment())

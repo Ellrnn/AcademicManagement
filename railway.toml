@@ -1,0 +1,8 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./AcademicManagement.Api/Dockerfile"
+
+[deploy]
+startCommand = "./AcademicManagement.Api"
+restartPolicyType = "always"
+healthcheckPath = "health"
