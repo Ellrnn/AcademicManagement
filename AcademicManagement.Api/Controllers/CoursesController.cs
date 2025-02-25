@@ -59,7 +59,7 @@ namespace AcademicManagement.Api.Controllers
             return Created(string.Empty, response);
         }
 
-        [HttpDelete()]
+        [HttpDelete("/courses")]
         [ProducesResponseType(typeof(ResponseCourseJson), StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ResponseErrorMessageJson), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteCourse(Guid courseId)

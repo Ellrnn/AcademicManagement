@@ -19,6 +19,7 @@ namespace AcademicManagement.Api.UseCases.Courses
                 .OrderBy(course => course.Name)
                 .Select(course => new ResponseCourseJson
                 {
+                    Id = course.Id,
                     Name = course.Name,
                     Description = course.Description,
                 })
