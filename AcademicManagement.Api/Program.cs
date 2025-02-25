@@ -28,17 +28,19 @@ var connection_string = Environment.GetEnvironmentVariable("DATABASE_URL") ?? bu
 
 if (!string.IsNullOrEmpty(connection_string) && connection_string.StartsWith("postgres://"))
 {
-    var databaseUri = new Uri(connection_string);
+    var databaseUri = new Uri(connection_string.Replace("postgresql://", "postgres://"));
     var userInfo = databaseUri.UserInfo.Split(':');
+
     var npgBuilder = new NpgsqlConnectionStringBuilder
     {
         Host = databaseUri.Host,
         Port = databaseUri.Port,
         Username = userInfo[0],
         Password = userInfo.Length > 1 ? userInfo[1] : "",
-        Database = databaseUri.AbsolutePath.Trim('/'),
+        Database = databaseUri.AbsolutePath.TrimStart('/'),
         SslMode = SslMode.Prefer,
     };
+
     connection_string = npgBuilder.ConnectionString;
 }
 
