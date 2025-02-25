@@ -28,4 +28,4 @@ RUN dotnet publish "./AcademicManagement.Api.csproj" -c $BUILD_CONFIGURATION -o 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "AcademicManagement.Api"]
+ENTRYPOINT ["dotnet", "/app/AcademicManagement.Api"]

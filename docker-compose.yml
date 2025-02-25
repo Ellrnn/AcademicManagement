@@ -7,6 +7,8 @@ services:
     ports:
       - "5000:5000"
       - "5001:5001"
+    depends_on:
+      - academicmanagement.database
   academicmanagement.database:
     image: postgres:latest
     container_name: academicmanagement.database

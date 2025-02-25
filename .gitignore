@@ -47,3 +47,5 @@ node_modules/
 
 # Ignore MacOS-specific files
 .DS_Store
+
+.containers/
