@@ -24,7 +24,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddHealthChecks();
 
 builder.Services.AddDbContext<DataBaseContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DataBasePg")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString(Environment.GetEnvironmentVariable("DATABASE_URL") ?? "DataBasePg")));
 
 builder.Services.AddScoped<RegisterStudentsUseCase>();
 builder.Services.AddScoped<UpdateStudentUseCase>();
