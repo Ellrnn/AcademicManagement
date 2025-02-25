@@ -3,6 +3,6 @@ builder = "dockerfile"
 dockerfilePath = "./AcademicManagement.Api/Dockerfile.prod"
 
 [deploy]
-startCommand = "./AcademicManagement.Api"
+startCommand = "./AcademicManagement.Api.dll"
 restartPolicyType = "always"
 healthcheckPath = "health"
