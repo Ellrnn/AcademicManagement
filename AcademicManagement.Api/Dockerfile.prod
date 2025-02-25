@@ -27,5 +27,4 @@ RUN dotnet publish "./AcademicManagement.Api.csproj" -c $BUILD_CONFIGURATION -o 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-RUN chmod +x /app/AcademicManagement.Api.dll
-ENTRYPOINT ["/app/AcademicManagement.Api.dll"]
+ENTRYPOINT ["dotnet", "/app/AcademicManagement.Api.dll"]
