@@ -1,1 +1,49 @@
-﻿/.vs/AcademicManagement
+﻿# Ignore Visual Studio specific files
+.vs/
+
+# Ignore build output and dependencies
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore package-related files
+packages/
+project.lock.json
+
+# Ignore logs and temporary files
+logs/
+*.log
+
+# Ignore application secrets
+secrets.json
+appsettings.Development.json
+
+# Ignore database-related files
+*.mdf
+*.ldf
+*.sqlite
+
+# Ignore publish output
+publish/
+wwwroot/
+
+# Ignore Rider-specific files
+.idea/
+
+# Ignore ReSharper-specific files
+*.DotSettings.user
+
+# Ignore NPM dependencies (if using frontend frameworks)
+node_modules/
+
+# Ignore Docker-related files
+.dockerignore
+**/docker-compose.override.yml
+
+# Ignore MacOS-specific files
+.DS_Store
