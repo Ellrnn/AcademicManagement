@@ -3,6 +3,7 @@ builder = "dockerfile"
 dockerfilePath = "./AcademicManagement.Api/Dockerfile.prod"
 
 [deploy]
+preDeployCommand = "dotnet ef database update --environment Production"
 startCommand = "dotnet /app/AcademicManagement.Api.dll"
 restartPolicyType = "always"
 healthcheckPath = "health"
