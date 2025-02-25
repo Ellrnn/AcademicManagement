@@ -3,7 +3,6 @@ builder = "dockerfile"
 dockerfilePath = "./AcademicManagement.Api/Dockerfile.prod"
 
 [deploy]
-preDeployCommand = "dotnet update-database"
 startCommand = "dotnet /app/AcademicManagement.Api.dll"
 restartPolicyType = "always"
 healthcheckPath = "health"
