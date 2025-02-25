@@ -14,6 +14,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["AcademicManagement.Api/AcademicManagement.Api.csproj", "AcademicManagement.Api/"]
 COPY ["AcademicManagment.Communication/AcademicManagement.Communication.csproj", "AcademicManagment.Communication/"]
+COPY ["docker-compose.dcproj", "docker-compose.dcproj"]
 RUN dotnet restore "./AcademicManagement.Api/AcademicManagement.Api.csproj"
 COPY . .
 WORKDIR "/src/AcademicManagement.Api"
