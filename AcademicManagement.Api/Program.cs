@@ -69,6 +69,12 @@ builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilters))
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<DataBaseContext>();
+    db.Database.Migrate();  // Applies any pending migrations
+}
+
 app.UseHealthChecks("/health");
 
 app.UseCors("AllowAll");
