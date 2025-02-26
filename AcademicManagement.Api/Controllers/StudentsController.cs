@@ -56,10 +56,10 @@ namespace AcademicManagement.Api.Controllers
             return Ok(response);
         }
 
-        [HttpPatch()]
+        [HttpPatch("{studentId}")]
         [ProducesResponseType(typeof(ResponseStudentJson), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ResponseErrorMessageJson), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdateStudent(Guid studentId, RequestUpdateStudentJson request)
+        public async Task<IActionResult> UpdateStudent(Guid studentId, [FromBody] RequestUpdateStudentJson request)
         {
             var response = await _updateStudentUseCase.Execute(studentId, request);
             return Ok(response);
