@@ -16,11 +16,11 @@ namespace AcademicManagement.Api.Controllers
         private readonly GetCourseStudentsUseCase _getCourseStudentsUseCase; 
 
         public CoursesController(
-           CreateCourseUseCase createCourseUseCase,
-           GetCoursesUseCase getCoursesUseCase,
-           UpdateCourseUseCase updateCourseUseCase,
-           DeleteCourseUseCase deleteCourseUseCase,
-           GetCourseStudentsUseCase getCourseStudentsUseCase)
+            CreateCourseUseCase createCourseUseCase,
+            GetCoursesUseCase getCoursesUseCase,
+            UpdateCourseUseCase updateCourseUseCase,
+            DeleteCourseUseCase deleteCourseUseCase,
+            GetCourseStudentsUseCase getCourseStudentsUseCase)
         {
             _createCourseUseCase = createCourseUseCase ?? throw new ArgumentNullException(nameof(createCourseUseCase));
             _getCoursesUseCase = getCoursesUseCase ?? throw new ArgumentNullException(nameof(getCoursesUseCase));
@@ -35,7 +35,6 @@ namespace AcademicManagement.Api.Controllers
         public async Task<IActionResult> CreateCourse(RequestCourseJson request)
         {
             var response = await _createCourseUseCase.Execute(request);
-
             return Created(string.Empty, response);
         }
 
@@ -45,18 +44,16 @@ namespace AcademicManagement.Api.Controllers
         public async Task<IActionResult> GetCourses()
         {
             var response = await _getCoursesUseCase.Execute();
-
             return Ok(response);
         }
 
         [HttpPatch()]
-        [ProducesResponseType(typeof(ResponseCourseJson), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ResponseCourseJson), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ResponseErrorMessageJson), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdateCourses(Guid courseId, RequestCourseJson request)
+        public async Task<IActionResult> UpdateCourses(Guid courseId, [FromBody] RequestCourseJson request)
         {
             var response = await _updateCourseUseCase.Execute(courseId, request);
-
-            return Created(string.Empty, response);
+            return Ok(response);
         }
 
         [HttpDelete("/courses")]
@@ -64,8 +61,7 @@ namespace AcademicManagement.Api.Controllers
         [ProducesResponseType(typeof(ResponseErrorMessageJson), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteCourse(Guid courseId)
         {
-             await _deleteCourseUseCase.Execute(courseId);
-
+            await _deleteCourseUseCase.Execute(courseId);
             return NoContent();
         }
 
@@ -75,7 +71,6 @@ namespace AcademicManagement.Api.Controllers
         public async Task<IActionResult> GetCoursesStudents(Guid courseId)
         {
             var response = await _getCourseStudentsUseCase.Execute(courseId);
-
             return Ok(response);
         }
     }
