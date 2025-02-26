@@ -47,7 +47,7 @@ namespace AcademicManagement.Api.Controllers
             return Ok(response);
         }
 
-        [HttpPatch()]
+        [HttpPatch("{courseId}")]
         [ProducesResponseType(typeof(ResponseCourseJson), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ResponseErrorMessageJson), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateCourses(Guid courseId, [FromBody] RequestCourseJson request)
