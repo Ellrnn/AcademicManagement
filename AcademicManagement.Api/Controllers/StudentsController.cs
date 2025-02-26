@@ -78,7 +78,7 @@ namespace AcademicManagement.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ResponseErrorMessageJson), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ResponseErrorMessageJson), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> EnrollStudentInCourse(Guid studentId, RequestEnrollStudentJson request)
+        public async Task<IActionResult> EnrollStudentInCourse(Guid studentId, [FromBody] RequestEnrollStudentJson request)
         {
             request.StudentId = studentId;
             await _enrollStudentInCoursesUseCase.Execute(request);
