@@ -96,9 +96,9 @@ namespace AcademicManagement.Api.Controllers
         [HttpDelete("/enrollments")]
         [ProducesResponseType(typeof(ResponseStudentJson), StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ResponseErrorMessageJson), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> DeleteEnrollment(Guid studentId, Guid courseId)
+        public async Task<IActionResult> DeleteEnrollment(Guid enrollmentId)
         {
-            await _deleteEnrollmentUseCase.Execute(studentId, courseId);
+            await _deleteEnrollmentUseCase.Execute(enrollmentId);
             return NoContent();
         }
     }
