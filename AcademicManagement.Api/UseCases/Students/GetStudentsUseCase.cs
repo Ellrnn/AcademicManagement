@@ -19,6 +19,7 @@ namespace AcademicManagement.Api.UseCases.Students
                 .OrderBy(student => student.Name)
                 .Select(student => new ResponseStudentJson
                 {
+                    Id = student.Id
                     Name = student.Name,
                     Email = student.Email,
                     DateBirth = student.DateBirth
