@@ -22,6 +22,7 @@ namespace AcademicManagement.Api.UseCases.Courses
                 .Select(e => new ResponseStudentJson
                 {
                     Id = e.Student.Id,
+                    EnrollmentId = e.Id,
                     Name = e.Student.Name,
                     Email = e.Student.Email,
                     DateBirth = e.Student.DateBirth 
