@@ -21,6 +21,7 @@ namespace AcademicManagement.Api.UseCases.Courses
                 .Where(e => e.CourseId == courseId)
                 .Select(e => new ResponseStudentJson
                 {
+                    Id = e.Student.Id,
                     Name = e.Student.Name,
                     Email = e.Student.Email,
                     DateBirth = e.Student.DateBirth 
