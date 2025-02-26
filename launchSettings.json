@@ -4,7 +4,8 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "academicmanagement.api": "StartDebugging"
+        "academicmanagement.api": "StartDebugging",
+        "academicmanagement.database": "StartWithoutDebugging"
       }
     }
   }
